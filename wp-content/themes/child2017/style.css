@@ -1,0 +1,13 @@
+/*
+Theme Name: Child Of Twenty Seventeen
+Template: twentyseventeen
+*/
+
+/*
+To get the paren style
+*/
+@import url("../twentyseventeen/style.css");
+
+.navigation-top {
+    background-color:gold;
+}

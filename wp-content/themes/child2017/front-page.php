@@ -1,0 +1,1 @@
+<div><?php dynamic_sidebar('child2017_wdgt_area');?></div>
