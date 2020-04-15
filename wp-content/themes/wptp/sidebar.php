@@ -1,0 +1,1 @@
+<div calss="widgets"><?php dynamic_sidebar('wptp_area_id'); ?></div>

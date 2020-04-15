@@ -13,7 +13,7 @@ function wptp_sidebar() {
         'id' => 'wptp_area_id',
         'name' => 'Widget area',
         'description'  => 'Show widgets added from the Dashboard',
-        'before_widget'  => '<asside',
+        'before_widget'  => '<aside',
         'after_widget'  => '</aside>',
         'before_title'  => '<h1>',
         'after_title'  => '</h1>',
@@ -24,5 +24,5 @@ function wptp_sidebar() {
 add_action('init', 'wptp_add_menu');
 function wptp_add_menu()
 {
-    register_nav_menu('main_menu', 'WpTP Main Menu');
+    register_nav_menu('WpTP Main Menu ', 'Location of wptpmenu');
 }

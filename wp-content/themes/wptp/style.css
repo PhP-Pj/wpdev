@@ -1,0 +1,110 @@
+/*
+Theme Name: Wp Tp
+Theme URI: http://my.wpdev.com:88/
+Author: 
+Author URI: http://my.wpdev.com:88/
+Description: Our General theme is designed to cater for all the general feature a modern web site would need.
+Requires at least: 4.9.6
+Requires PHP: 5.2.4
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Mooc TP
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something even cooler, have fun, and share what you've learned with others.
+
+*/
+
+/*
+Theme Name: Thème TP
+*/
+
+* {
+    margin:0;
+    padding:0;
+    text-decoration:none;
+    color:black;
+    font-family:sans-serif;
+  }
+  body {background:#F5F5F5;}
+  h1,h2 {color:#555;}
+  a {color:#DDAA88}
+  
+  .container {
+    margin:0 auto;
+    width:900px;
+  }
+  .header {
+    background:#E9E9E9;
+    border-bottom:1px solid #E0E0E0;
+    margin-bottom:20px;
+    padding-top:10px;
+  }
+  .header h1 {
+    color:#CC3030;
+    font-size:40px;
+    margin:10px 0;
+  }
+  .header h2 {
+    color:#FF9090;
+    font-size:24px;
+  }
+  .content {
+    display:inline-block;
+    width:650px;
+  }
+  .menu li {
+    border-right:1px solid #DDD;
+    display:inline-block;
+    padding:10px;
+    list-style:none;
+  }
+  .menu li:last-child {border:none;}
+  .menu a {color:#555;}
+  .current-menu-item a {color:#E44;}
+  
+  .widgets {
+    display:inline-block;
+    width:200px;
+    vertical-align:top;
+  }
+  .widgets li {list-style:none;}
+  .widgets aside {
+    background:#FFF;
+    border-radius:3px;
+    box-shadow:0 2px 6px -2px #999;
+    margin:0 0 15px;
+    padding:15px;
+  }
+  .widgets aside h1 {
+    border-bottom: 1px dashed #CCC;
+    color:#555;
+    margin-bottom:10px;
+    font-size:18px;
+  }
+  
+  .post {
+    background:#FFF;
+    border-radius:3px;
+    box-shadow:0 2px 6px -2px #999;
+    margin:0 10px 15px;
+    padding:20px;
+  }
+  .post h1 {margin-bottom: 15px;}
+  .comment-respond {
+    border-top:1px solid #DDD;
+    font-size:14px;
+    margin:20px 5px;
+    padding-top:10px;
+  }
+  footer {
+    text-align:center;
+    font-size:12px;
+    background:#E9E9E9;
+    border-top:1px solid #E0E0E0;
+    margin-top:20px;
+    padding:10px 0;
+  }
+  

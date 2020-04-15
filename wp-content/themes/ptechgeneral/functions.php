@@ -35,7 +35,7 @@ function ptech_add_sidebar() {
 }
 
 /*
-filters: we are creating a filter and applying it to title
+filters: we are creating a filter and applying it to the_title
 */
 function crazy_casing($some_text) {
     $to_crazy = "";
