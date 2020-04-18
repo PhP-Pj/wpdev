@@ -7,6 +7,10 @@ class WptpNewsletter
     {
         // We add an action so the Widget is registered at init time
         add_action('widgets_init', function(){register_widget('WptpNewsletterWidget');});
+        // wp_loaded This hook is fired once WP, all plugins, 
+        // and the theme are fully loaded and instantiated, which should happen when
+        // saving the email address even though we are staying on the same page
+        add_action('wp_loaded', array($this, 'save_email'));
     }
 
     public static function install()
@@ -17,7 +21,7 @@ class WptpNewsletter
     }
 
     public static function nop () {
-
+        write_log('Deactivatin WptpNewsletterWidget');
     }
 
     public static function uninstall()
@@ -25,5 +29,18 @@ class WptpNewsletter
         global $wpdb;
 
         $wpdb->query("DROP TABLE IF EXISTS {$wpdb->prefix}wptp_newsletter_email;");
+    }
+
+    public function save_email()
+    {
+        if (isset($_POST['wptp_newsletter_email']) && !empty($_POST['wptp_newsletter_email'])) {
+            global $wpdb;
+            $email = $_POST['wptp_newsletter_email'];
+    
+            $row = $wpdb->get_row("SELECT * FROM {$wpdb->prefix}wptp_newsletter_email WHERE email = '$email'");
+            if (is_null($row)) {
+                $wpdb->insert("{$wpdb->prefix}wptp_newsletter_email", array('email' => $email));
+            }
+        }
     }
 }
