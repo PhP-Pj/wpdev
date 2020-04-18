@@ -8,9 +8,12 @@
             echo "I am in index.php but doing Category Gardening stuff!";
         }
     ?>
-    <h1 class="the-title>">?<?php the_title() ?></h2>
-    <div>Category:<?php the_category('div'); ?></div>
-    <?php
+    <h1 class="the-title>"><?php the_title() ?></h2>
+    <?php 
+        if ( has_category() ) {
+            echo "<div>Categories: </div>";
+            the_category();
+        }
         the_content();
         comments_template();
         comment_form();

@@ -16,7 +16,7 @@ class WptpNewsletterWidget extends WP_Widget
 {
     public function __construct()
     {
-        parent::__construct('wptp_newsletter', 'Newsletter', array('description' => 'Un formulaire d\'inscription à la newsletter.'));
+        parent::__construct('wptp_newsletter', 'Newsletter', array('description' => 'Newsletter Fubscription Form.'));
     }
     
     public function widget($args, $instance)
@@ -30,7 +30,7 @@ class WptpNewsletterWidget extends WP_Widget
         <!-- action is "" to stay on the same page -->
         <form action="" method="post">
             <p>
-                <label for="wptp_newsletter_email">Your email address:</label>
+                <label for="wptp_newsletter_email">Enter your email address to get the newsletter:</label>
                 <input id="wptp_newsletter_email" name="wptp_newsletter_email" type="email"/>
             </p>
             <input type="submit" value="Enter"/>

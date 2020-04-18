@@ -15,7 +15,7 @@
         endwhile;
         ?>
     </div>
-    <!--div><?php dynamic_sidebar('wptp_area_id'); ?></div-->
+    <!--div><?php //dynamic_sidebar('wptp_area_id'); ?></div-->
     <!-- get_sidebar() calls sidebar.php -->
     <div><?php get_sidebar('wptp_area_id'); ?></div>
 </div>
