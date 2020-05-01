@@ -29,7 +29,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 ```
 
-* a funcstions.php file that will declare all we need at init time and our own "gloabl functions"
+* a functions.php file that will declare all we need at init time and our own "global functions"
 
 ### add_action
 
@@ -49,7 +49,7 @@ An action is actually called with **do_action**
 do_action('event name', arg1...arg1); //args been the aguments passed to the action
 ```
 
-For instance the **save_post event** triggers the **save_post acction** located in wp-includes/post.php as
+For instance the **save_post event** triggers the **save_post action** located in wp-includes/post.php as
 
 ```
 do_action('save_post', $post->ID, $post);
@@ -57,7 +57,7 @@ do_action('save_post', $post->ID, $post);
 
 ## Fallback mechanism
 
-Even though in theory it is possible to manage the entire site from index.php, it would be very poor practice because the code would look like a bowl of spagehtti.  
+Even though in theory it is possible to manage the entire site from index.php, it would be very poor practice because the code would look like a bowl of spaghetti.  
 To make it easier to decouple WordPress develop this principle of reading a file depending on the context of the current page.  
 For instance to display the **list of posts** related to a **category** the file **category.php** will be called. If it doesn't exist WordPress will fallback to index.php.  
 Now if the category was **gardening** WordPress would look for the file **category-gardening.php** first before falling back to **category.php**
@@ -104,7 +104,7 @@ If your blog is at http://example.com/blog/ and a visitor clicks on a link to a 
 
 ### Template files
 
-See [comom template files](https://developer.wordpress.org/themes/basics/template-files/#common-wordpress-template-files)
+See [common template files](https://developer.wordpress.org/themes/basics/template-files/#common-wordpress-template-files)
 
 ## Child Themes
 
@@ -133,7 +133,7 @@ To inherits the parent style as well and tweak it the add to style.css:
 
 ### Parent logic
 
-It is possible to override the parent logic for instance **footer.php** by just redining it the child theme.
+It is possible to override the parent logic for instance **footer.php** by just redefining it in the child theme.
 
 footer.php:
 
@@ -148,7 +148,7 @@ footer.php:
 
 ## Widgets
 
-It is best to add widget trough the dashboard but to appear in the dasboard 
+It is best to add widget trough the dashboard but to appear in the dashboard 
 we need to define at least one zone for the widget and register it in functions.php.
 
 ```
@@ -185,13 +185,13 @@ function zero_add_menu()
 
 ## Template tags
 
-**Template tags** are wordpress functions that can be called in themes to to retieve content from the DB and:
+**Template tags** are wordpress functions that can be called in themes to to retrieve content from the DB and:
 
-* display some content in apage
+* display some content in a page
 * check conditions
-* retieve gobla info like the site's title or its address
+* retrieve global info like the site's title or its address
 
-Suach as get_header(), the_title(), bloginfo()
+Such as get_header(), the_title(), bloginfo()
 
 ### example: bloginfo()
 
@@ -281,7 +281,7 @@ endif;<br />
 ?><br />
 ```
 
-#### Displaying a postin a post page
+#### Displaying a post in a post page
 
 ```
 &lt;?php<br />
